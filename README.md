@@ -5,15 +5,11 @@ This repo provides basic examples of using RxDart in practical applications.
 
 **The sample(s) will  keep on updating
 
-<img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s1.png" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/src/s2.png"   alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s3.png"   alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png"   alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/ss4.png"   alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s5.png"   alt="RxDart">
+<img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s1.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s2.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s3.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400"  alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s5.png" height="400" alt="RxDart">
 
 ### Key Highlights
-- The table constructed isn't the flutter's native DataTable.
-- The table is manually coded hence serves a great learning purpose on how to create simple tables manually in flutter
-- Supports vertical & horizontal scroll
-- Supports custom columns includes default value, column name, value builder
-- Supports nested data showing
-- Supports pagination
+- Shows how to use Behavior Subject in network call.
+- Shows how to combine two api result both serial and parallel api requests
 
 # ⭐ My Flutter Packages
 - [pie_chart](https://pub.dartlang.org/packages/pie_chart)  [![GitHub stars](https://img.shields.io/github/stars/apgapg/pie_chart.svg?style=social)](https://github.com/apgapg/pie_chart)  Flutter Pie Chart with cool animation.
