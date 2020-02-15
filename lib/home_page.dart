@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rx_dart_samples/pages/one_network_call.dart';
 import 'package:rx_dart_samples/pages/one_network_call_with_refresh.dart';
+import 'package:rx_dart_samples/pages/search_in_app.dart';
 import 'package:rx_dart_samples/pages/two_network_calls_parallel.dart';
 import 'package:rx_dart_samples/pages/two_network_calls_series.dart';
 
@@ -67,6 +68,19 @@ class _HomePageState extends State<HomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (_) => TwoNetworkCallsParallel(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text(
+                "Search: In App",
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SearchInApp(),
                   ),
                 );
               },

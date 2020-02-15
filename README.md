@@ -5,11 +5,12 @@ This repo provides basic examples of using RxDart in practical applications.
 
 **The sample(s) will  keep on updating
 
-<img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s1.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s2.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s3.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400"  alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s5.png" height="400" alt="RxDart">
+<img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s1.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s2.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s3.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400"  alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s4.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s5.png" height="400" alt="RxDart"> <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s6.png" height="400" alt="RxDart">
 
 ### Key Highlights
 - Shows how to use Behavior Subject in network call.
 - Shows how to combine two api result both serial and parallel api requests
+- Shows how to do in app search from a list of data
 
 # ⭐ My Flutter Packages
 - [pie_chart](https://pub.dartlang.org/packages/pie_chart)  [![GitHub stars](https://img.shields.io/github/stars/apgapg/pie_chart.svg?style=social)](https://github.com/apgapg/pie_chart)  Flutter Pie Chart with cool animation.
