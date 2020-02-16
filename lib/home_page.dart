@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("RxDart Samples"),
+        title: const Text("RxDart Samples"),
       ),
       body: Center(
         child: ListView(
@@ -23,6 +23,9 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: const Text(
                 "One Network Call",
+              ),
+              subtitle: const Text(
+                "Behavior Subject",
               ),
               onTap: () {
                 Navigator.push(
@@ -37,6 +40,9 @@ class _HomePageState extends State<HomePage> {
               title: const Text(
                 "One Network Call with Refresh",
               ),
+              subtitle: const Text(
+                "Behavior Subject",
+              ),
               onTap: () {
                 Navigator.push(
                   context,
@@ -49,6 +55,9 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: const Text(
                 "Two Network Calls- Series",
+              ),
+              subtitle: const Text(
+                "Behavior Subject, Rx.combineLatest",
               ),
               onTap: () {
                 Navigator.push(
@@ -63,6 +72,9 @@ class _HomePageState extends State<HomePage> {
               title: const Text(
                 "Two Network Calls- Parallel",
               ),
+              subtitle: const Text(
+                "Behavior Subject, Rx.combineLatest",
+              ),
               onTap: () {
                 Navigator.push(
                   context,
@@ -75,6 +87,9 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: const Text(
                 "Search: In App",
+              ),
+              subtitle: const Text(
+                "Behavior Subject, StreamTransformers",
               ),
               onTap: () {
                 Navigator.push(
