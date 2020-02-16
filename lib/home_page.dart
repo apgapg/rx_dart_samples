@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:rx_dart_samples/pages/one_network_call.dart';
 import 'package:rx_dart_samples/pages/one_network_call_with_refresh.dart';
 import 'package:rx_dart_samples/pages/search_in_app.dart';
+import 'package:rx_dart_samples/pages/search_on_backend/search_on_backend.dart';
 import 'package:rx_dart_samples/pages/two_network_calls_parallel.dart';
 import 'package:rx_dart_samples/pages/two_network_calls_series.dart';
+import 'package:rx_dart_samples/widgets/menu_header.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -19,7 +21,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: ListView(
+          padding: EdgeInsets.symmetric(
+            vertical: 8,
+          ),
           children: <Widget>[
+            MenuHeader("Level 1"),
             ListTile(
               title: const Text(
                 "One Network Call",
@@ -52,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
+            MenuHeader("Level 2"),
             ListTile(
               title: const Text(
                 "Two Network Calls- Series",
@@ -84,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             ),
+            MenuHeader("Level 3"),
             ListTile(
               title: const Text(
                 "Search: In App",
@@ -96,6 +104,23 @@ class _HomePageState extends State<HomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (_) => SearchInApp(),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              isThreeLine: true,
+              title: const Text(
+                "Search: On Backend",
+              ),
+              subtitle: const Text(
+                "Simple Bloc, Behavior Subject, Stream, distinct, debounce, switchMap",
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SearchOnBackend(),
                   ),
                 );
               },
