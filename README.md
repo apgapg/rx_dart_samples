@@ -1,5 +1,6 @@
-# Rx Dart Samples [![GitHub stars](https://img.shields.io/github/stars/apgapg/rx_dart_samples.svg?style=social)](https://github.com/apgapg/rx_dart_samples) [![Twitter Follow](https://img.shields.io/twitter/url/https/@ayushpgupta.svg?style=social)](https://twitter.com/ayushpgupta) ![GitHub last commit](https://img.shields.io/github/last-commit/apgapg/rx_dart_samples.svg) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://play.google.com/store/apps/details?id=com.coddu.flutterprofile)[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/apgapg/rx_dart_samples)
+<img src="https://raw.githubusercontent.com/ReactiveX/rxjs/master/doc/asset/Rx_Logo_S.png" alt="RxJS Logo" width="86" height="86">
 
+# Rx Dart Samples [![GitHub stars](https://img.shields.io/github/stars/apgapg/rx_dart_samples.svg?style=social)](https://github.com/apgapg/rx_dart_samples) [![Twitter Follow](https://img.shields.io/twitter/url/https/@ayushpgupta.svg?style=social)](https://twitter.com/ayushpgupta) ![GitHub last commit](https://img.shields.io/github/last-commit/apgapg/rx_dart_samples.svg) [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://play.google.com/store/apps/details?id=com.coddu.flutterprofile)[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/apgapg/rx_dart_samples)
 
 This repo provides basic examples of using RxDart in practical applications.
 
