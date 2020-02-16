@@ -6,6 +6,13 @@ This repo provides basic examples of using RxDart in practical applications.
 
 **The sample(s) will  keep on updating
 
+- [one_network_call_with_refresh.dart](https://github.com/apgapg/rx_dart_samples/blob/master/lib/pages/one_network_call_with_refresh.dart)
+- [two_network_calls_series.dart](https://github.com/apgapg/rx_dart_samples/blob/master/lib/pages/two_network_calls_series.dart)
+- [two_network_calls_parallel.dart](https://github.com/apgapg/rx_dart_samples/blob/master/lib/pages/two_network_calls_parallel.dart)
+- [search_in_app.dart](https://github.com/apgapg/rx_dart_samples/blob/master/lib/pages/search_in_app.dart)
+- [search_on_backend.dart](https://github.com/apgapg/rx_dart_samples/blob/master/lib/pages/search_on_backend/search_on_backend.dart)
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/apgapg/rx_dart_samples/master/res/s1.png" height="500" alt="RxDart">
 </p>
