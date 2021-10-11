@@ -43,16 +43,16 @@ class _SearchOnBackendState extends State<SearchOnBackend> {
             ),
           ),
           Expanded(
-            child: StreamBuilder<List>(
+            child: StreamBuilder<List?>(
               stream: _bloc.dataStream,
               builder: (context, snapshot) {
                 if (snapshot.hasData && snapshot.data != null) {
                   return ListView(
                     children: <Widget>[
-                      if (snapshot.data.isNotEmpty)
-                        ...snapshot.data.map(
+                      if (snapshot.data!.isNotEmpty)
+                        ...snapshot.data!.map(
                           (item) => ListTile(
-                            title: Text(item ?? "--"),
+                            title: Text(item),
                           ),
                         )
                       else

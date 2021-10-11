@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: ListView(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             vertical: 8,
           ),
           children: <Widget>[

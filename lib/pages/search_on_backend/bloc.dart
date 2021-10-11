@@ -14,7 +14,7 @@ class Bloc {
 
   final _controller = TextEditingController();
 
-  Stream<List> get dataStream {
+  Stream<List<String>?>? get dataStream {
     return _textSubject
         .distinct()
         .debounceTime(
@@ -22,7 +22,7 @@ class Bloc {
             milliseconds: 250,
           ),
         )
-        .switchMap<List<String>>(
+        .switchMap<List<String>?>(
           // ignore: unnecessary_lambdas
           (String value) => _fetchTodos(value),
         );
@@ -30,14 +30,17 @@ class Bloc {
 
   TextEditingController get textController => _controller;
 
-  Stream<List<String>> _fetchTodos(String value) async* {
+  Stream<List<String>?> _fetchTodos(String value) async* {
     try {
       yield null; //To show loader while ongoing request
-      final url = (value != null && value.isNotEmpty) ? "$_url?postId=$value" : _url;
-      final response = await http.get(url);
+      final url =
+          (value != null && value.isNotEmpty) ? "$_url?postId=$value" : _url;
+      final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
-        final list = (jsonDecode(response.body) as List).cast<Map<String, dynamic>>();
-        final nameList = list.map((e) => "Post Id: ${e['postId']}\n${e['name']}").toList();
+        final list =
+            (jsonDecode(response.body) as List).cast<Map<String, dynamic>>();
+        final nameList =
+            list.map((e) => "Post Id: ${e['postId']}\n${e['name']}").toList();
         yield nameList;
       } else {
         throw Exception("Server Error: ${response.statusCode}");
