@@ -9,12 +9,12 @@ class MenuHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: 4 ,
+        vertical: 4,
         horizontal: 16,
       ),
       child: Text(
         title.toUpperCase(),
-        style: Theme.of(context).textTheme.overline.copyWith(
+        style: Theme.of(context).textTheme.overline!.copyWith(
               fontSize: 12,
               color: Colors.blue,
             ),

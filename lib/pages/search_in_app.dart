@@ -23,7 +23,7 @@ class _SearchInAppState extends State<SearchInApp> {
   StreamTransformer<List<String>, List<String>> get streamTransformer =>
       StreamTransformer<List<String>, List<String>>.fromHandlers(
           handleData: (list, sink) {
-        if ((_controller.text ?? "").isNotEmpty) {
+        if ((_controller.text).isNotEmpty) {
           var newList = list.where((item) {
             return item.toLowerCase().contains(_controller.text.toLowerCase());
           }).toList();
@@ -56,9 +56,8 @@ class _SearchInAppState extends State<SearchInApp> {
                   padding: const EdgeInsets.all(12),
                   child: SearchTextField(_controller),
                 ),
-                if (snapshot.data.isNotEmpty)
-                  ...snapshot.data
-                      .map((item) => ListTile(title: Text(item ?? "--")))
+                if (snapshot.data!.isNotEmpty)
+                  ...snapshot.data!.map((item) => ListTile(title: Text(item)))
                 else
                   NoItemsFound()
               ],
@@ -81,17 +80,17 @@ class _SearchInAppState extends State<SearchInApp> {
 
   Future<void> _fetchTodos() async {
     try {
-      final response = await http.get(_todoUrl);
+      final response = await http.get(Uri.parse(_todoUrl));
       if (response.statusCode == 200) {
         final List list =
             jsonDecode(response.body).cast<Map<String, dynamic>>();
-        final nameList = list.map((e) => e['title']?.toString()).toList();
+        final nameList = list.map((e) => e['title'].toString()).toList();
         _todoSubject.add(nameList);
       } else {
         throw Exception("Server Error: ${response.statusCode}");
       }
     } catch (e) {
-      _todoSubject.addError(e?.toString());
+      _todoSubject.addError(e.toString());
     }
   }
 

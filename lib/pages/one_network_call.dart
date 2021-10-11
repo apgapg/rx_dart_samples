@@ -31,11 +31,12 @@ class _OneNetworkCallState extends State<OneNetworkCall> {
       body: StreamBuilder<List<String>>(
           stream: _dataSubject,
           builder: (context, snapshot) {
-            if (snapshot.hasData && snapshot.data != null) {
+            if (snapshot.hasData &&
+                snapshot.data != null &&
+                snapshot.data!.isNotEmpty) {
               return ListView(
                 children: <Widget>[
-                  ...snapshot.data
-                      .map((item) => ListTile(title: Text(item ?? "--")))
+                  ...snapshot.data!.map((item) => ListTile(title: Text(item)))
                 ],
               );
             } else if (snapshot.hasError) {
@@ -55,18 +56,18 @@ class _OneNetworkCallState extends State<OneNetworkCall> {
 
   Future<void> _fetchData() async {
     try {
-      _dataSubject.add(null);
-      final response = await http.get(_url);
+      _dataSubject.add([]);
+      final response = await http.get(Uri.parse(_url));
       if (response.statusCode == 200) {
         final List list =
             jsonDecode(response.body).cast<Map<String, dynamic>>();
-        final nameList = list.map((e) => e['name']?.toString()).toList();
+        final nameList = list.map((e) => e['name'].toString()).toList();
         _dataSubject.add(nameList);
       } else {
         throw Exception("Server Error: ${response.statusCode}");
       }
     } catch (e) {
-      _dataSubject.addError(e?.toString());
+      _dataSubject.addError(e.toString());
     }
   }
 }

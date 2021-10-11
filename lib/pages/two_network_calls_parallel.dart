@@ -41,16 +41,16 @@ class _TwoNetworkCallsParallelState extends State<TwoNetworkCallsParallel> {
                   Padding(
                     padding: const EdgeInsets.all(8),
                     child: Text(
-                      snapshot.data[0] ?? "NA",
-                      style: TextStyle(
+                      snapshot.data![0] ?? "NA",
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 24,
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  ...snapshot.data[1]
-                      .map((item) => ListTile(title: Text(item ?? "--")))
+                  ...snapshot.data![1]
+                      .map((item) => ListTile(title: Text(item)))
                 ],
               );
             } else if (snapshot.hasError) {
@@ -71,7 +71,7 @@ class _TwoNetworkCallsParallelState extends State<TwoNetworkCallsParallel> {
 
   Future<void> _fetchUser() async {
     try {
-      final response = await http.get(_userUrl);
+      final response = await http.get(Uri.parse(_userUrl));
       if (response.statusCode == 200) {
         final user = jsonDecode(response.body);
         _userSubject.add(user['name']);
@@ -79,23 +79,23 @@ class _TwoNetworkCallsParallelState extends State<TwoNetworkCallsParallel> {
         throw Exception("Server Error: ${response.statusCode}");
       }
     } catch (e) {
-      _userSubject.addError(e?.toString());
+      _userSubject.addError(e.toString());
     }
   }
 
   Future<void> _fetchTodos() async {
     try {
-      final response = await http.get(_todoUrl);
+      final response = await http.get(Uri.parse(_todoUrl));
       if (response.statusCode == 200) {
         final List list =
             jsonDecode(response.body).cast<Map<String, dynamic>>();
-        final nameList = list.map((e) => e['title']?.toString()).toList();
+        final nameList = list.map((e) => e['title'].toString()).toList();
         _todoSubject.add(nameList);
       } else {
         throw Exception("Server Error: ${response.statusCode}");
       }
     } catch (e) {
-      _todoSubject.addError(e?.toString());
+      _todoSubject.addError(e.toString());
     }
   }
 
